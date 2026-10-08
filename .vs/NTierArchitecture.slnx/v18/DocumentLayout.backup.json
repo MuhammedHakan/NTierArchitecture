@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Projects\\NTierArchitecture\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D61A825A-D643-84C9-2879-D50F20CD96A0}|NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.domain\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D61A825A-D643-84C9-2879-D50F20CD96A0}|NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj|solutionrelative:ntierarchitecture.domain\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D61A825A-D643-84C9-2879-D50F20CD96A0}|NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.domain\\ntierarchitecture.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D61A825A-D643-84C9-2879-D50F20CD96A0}|NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj|solutionrelative:ntierarchitecture.domain\\ntierarchitecture.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0F2BB228-139D-49DE-3422-DC4AE2A53E2F}|NTierArchitecture.Presentation\\NTierArchitecture.Presentation.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.presentation\\main.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F2BB228-139D-49DE-3422-DC4AE2A53E2F}|NTierArchitecture.Presentation\\NTierArchitecture.Presentation.csproj|solutionrelative:ntierarchitecture.presentation\\main.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,21 +22,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Domain\\Entities\\Student.cs",
+              "RelativeDocumentMoniker": "NTierArchitecture.Domain\\Entities\\Student.cs",
+              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Domain\\Entities\\Student.cs",
+              "RelativeToolTip": "NTierArchitecture.Domain\\Entities\\Student.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T10:18:08.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NTierArchitecture.Domain",
+              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj",
+              "RelativeDocumentMoniker": "NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj",
+              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj*",
+              "RelativeToolTip": "NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-10-08T10:16:55.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Main.Designer.cs",
               "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Presentation\\Main.Designer.cs",
               "RelativeDocumentMoniker": "NTierArchitecture.Presentation\\Main.Designer.cs",
               "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Presentation\\Main.Designer.cs",
               "RelativeToolTip": "NTierArchitecture.Presentation\\Main.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-08T07:30:19.218Z",
               "EditorCaption": ""
