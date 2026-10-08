@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Projects\\NTierArchitecture\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D61A825A-D643-84C9-2879-D50F20CD96A0}|NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.domain\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D61A825A-D643-84C9-2879-D50F20CD96A0}|NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj|solutionrelative:ntierarchitecture.domain\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{404A2BB1-BF4B-A557-9A6A-4CEBB96F2859}|NTierArchitecture.DataAccsess\\NTierArchitecture.DataAccsess.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.dataaccsess\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{404A2BB1-BF4B-A557-9A6A-4CEBB96F2859}|NTierArchitecture.DataAccsess\\NTierArchitecture.DataAccsess.csproj|solutionrelative:ntierarchitecture.dataaccsess\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D61A825A-D643-84C9-2879-D50F20CD96A0}|NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.domain\\ntierarchitecture.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{D61A825A-D643-84C9-2879-D50F20CD96A0}|NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj|solutionrelative:ntierarchitecture.domain\\ntierarchitecture.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{404A2BB1-BF4B-A557-9A6A-4CEBB96F2859}|NTierArchitecture.DataAccsess\\NTierArchitecture.DataAccsess.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.dataaccsess\\migrations\\20261008140148_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{404A2BB1-BF4B-A557-9A6A-4CEBB96F2859}|NTierArchitecture.DataAccsess\\NTierArchitecture.DataAccsess.csproj|solutionrelative:ntierarchitecture.dataaccsess\\migrations\\20261008140148_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0F2BB228-139D-49DE-3422-DC4AE2A53E2F}|NTierArchitecture.Presentation\\NTierArchitecture.Presentation.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.presentation\\main.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,32 +22,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Student.cs",
-              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Domain\\Entities\\Student.cs",
-              "RelativeDocumentMoniker": "NTierArchitecture.Domain\\Entities\\Student.cs",
-              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Domain\\Entities\\Student.cs",
-              "RelativeToolTip": "NTierArchitecture.Domain\\Entities\\Student.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "20261008140148_Initial.cs",
+              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.DataAccsess\\Migrations\\20261008140148_Initial.cs",
+              "RelativeDocumentMoniker": "NTierArchitecture.DataAccsess\\Migrations\\20261008140148_Initial.cs",
+              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.DataAccsess\\Migrations\\20261008140148_Initial.cs",
+              "RelativeToolTip": "NTierArchitecture.DataAccsess\\Migrations\\20261008140148_Initial.cs",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-08T10:18:08.12Z",
+              "WhenOpened": "2026-10-08T14:01:48.716Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NTierArchitecture.Domain.csproj",
-              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj",
-              "RelativeDocumentMoniker": "NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj",
-              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj",
-              "RelativeToolTip": "NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-10-08T10:16:55.911Z",
+              "DocumentIndex": 0,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.DataAccsess\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "NTierArchitecture.DataAccsess\\Context\\AppDbContext.cs",
+              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.DataAccsess\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "NTierArchitecture.DataAccsess\\Context\\AppDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAACRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T13:49:06.158Z",
               "EditorCaption": ""
             },
             {

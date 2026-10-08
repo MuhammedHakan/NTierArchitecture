@@ -11,3 +11,8 @@ C:\Projects\NTierArchitecture\NTierArchitecture.Business\obj\Debug\net10.0\NTier
 C:\Projects\NTierArchitecture\NTierArchitecture.Business\obj\Debug\net10.0\ref\NTierArchitecture.Business.dll
 C:\Projects\NTierArchitecture\NTierArchitecture.Business\obj\Debug\net10.0\NTierArc.1080D041.Up2Date
 C:\Projects\NTierArchitecture\NTierArchitecture.Business\obj\Debug\net10.0\NTierArchitecture.Business.sourcelink.json
+C:\Projects\NTierArchitecture\NTierArchitecture.Business\bin\Debug\net10.0\NTierArchitecture.DataAccsess.dll
+C:\Projects\NTierArchitecture\NTierArchitecture.Business\bin\Debug\net10.0\NTierArchitecture.Domain.dll
+C:\Projects\NTierArchitecture\NTierArchitecture.Business\bin\Debug\net10.0\NTierArchitecture.DataAccsess.pdb
+C:\Projects\NTierArchitecture\NTierArchitecture.Business\bin\Debug\net10.0\NTierArchitecture.Domain.pdb
+C:\Projects\NTierArchitecture\NTierArchitecture.Business\obj\Debug\net10.0\NTierArchitecture.Business.csproj.AssemblyReference.cache
