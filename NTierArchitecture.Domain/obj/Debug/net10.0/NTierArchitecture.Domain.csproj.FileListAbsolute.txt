@@ -1,0 +1,12 @@
+C:\Projects\NTierArchitecture\NTierArchitecture.Domain\bin\Debug\net10.0\NTierArchitecture.Domain.deps.json
+C:\Projects\NTierArchitecture\NTierArchitecture.Domain\bin\Debug\net10.0\NTierArchitecture.Domain.dll
+C:\Projects\NTierArchitecture\NTierArchitecture.Domain\bin\Debug\net10.0\NTierArchitecture.Domain.pdb
+C:\Projects\NTierArchitecture\NTierArchitecture.Domain\obj\Debug\net10.0\NTierArchitecture.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\NTierArchitecture\NTierArchitecture.Domain\obj\Debug\net10.0\NTierArchitecture.Domain.AssemblyInfoInputs.cache
+C:\Projects\NTierArchitecture\NTierArchitecture.Domain\obj\Debug\net10.0\NTierArchitecture.Domain.AssemblyInfo.cs
+C:\Projects\NTierArchitecture\NTierArchitecture.Domain\obj\Debug\net10.0\NTierArchitecture.Domain.csproj.CoreCompileInputs.cache
+C:\Projects\NTierArchitecture\NTierArchitecture.Domain\obj\Debug\net10.0\NTierArchitecture.Domain.dll
+C:\Projects\NTierArchitecture\NTierArchitecture.Domain\obj\Debug\net10.0\refint\NTierArchitecture.Domain.dll
+C:\Projects\NTierArchitecture\NTierArchitecture.Domain\obj\Debug\net10.0\NTierArchitecture.Domain.pdb
+C:\Projects\NTierArchitecture\NTierArchitecture.Domain\obj\Debug\net10.0\ref\NTierArchitecture.Domain.dll
+C:\Projects\NTierArchitecture\NTierArchitecture.Domain\obj\Debug\net10.0\NTierArc.620261F9.Up2Date

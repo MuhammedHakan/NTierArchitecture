@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "NTierArchitecture.Business/1.0.0": {
+        "runtime": {
+          "NTierArchitecture.Business.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NTierArchitecture.Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

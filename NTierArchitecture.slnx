@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="NTierArchitecture.Business/NTierArchitecture.Business.csproj" />
+  <Project Path="NTierArchitecture.DataAccsess/NTierArchitecture.DataAccsess.csproj" />
+  <Project Path="NTierArchitecture.Domain/NTierArchitecture.Domain.csproj" />
+  <Project Path="NTierArchitecture.Presentation/NTierArchitecture.Presentation.csproj" />
+</Solution>

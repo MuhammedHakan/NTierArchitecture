@@ -1,0 +1,17 @@
+C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\bin\Debug\net10.0-windows\NTierArchitecture.Presentation.exe
+C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\bin\Debug\net10.0-windows\NTierArchitecture.Presentation.deps.json
+C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\bin\Debug\net10.0-windows\NTierArchitecture.Presentation.runtimeconfig.json
+C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\bin\Debug\net10.0-windows\NTierArchitecture.Presentation.dll
+C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\bin\Debug\net10.0-windows\NTierArchitecture.Presentation.pdb
+C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\obj\Debug\net10.0-windows\NTierArchitecture.Presentation.Main.resources
+C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\obj\Debug\net10.0-windows\NTierArchitecture.Presentation.csproj.GenerateResource.cache
+C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\obj\Debug\net10.0-windows\NTierArchitecture.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\obj\Debug\net10.0-windows\NTierArchitecture.Presentation.AssemblyInfoInputs.cache
+C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\obj\Debug\net10.0-windows\NTierArchitecture.Presentation.AssemblyInfo.cs
+C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\obj\Debug\net10.0-windows\NTierArchitecture.Presentation.csproj.CoreCompileInputs.cache
+C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\obj\Debug\net10.0-windows\NTierArchitecture.Presentation.dll
+C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\obj\Debug\net10.0-windows\refint\NTierArchitecture.Presentation.dll
+C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\obj\Debug\net10.0-windows\NTierArchitecture.Presentation.pdb
+C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\obj\Debug\net10.0-windows\NTierArchitecture.Presentation.genruntimeconfig.cache
+C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\obj\Debug\net10.0-windows\ref\NTierArchitecture.Presentation.dll
+C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\obj\Debug\net10.0-windows\NTierArc.5A179510.Up2Date
