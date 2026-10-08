@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Projects\\NTierArchitecture\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4B16B888-6D35-F6B7-F0B3-56EB4FC7CA69}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.business\\ntierarchitecture.business.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4B16B888-6D35-F6B7-F0B3-56EB4FC7CA69}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|solutionrelative:ntierarchitecture.business\\ntierarchitecture.business.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{404A2BB1-BF4B-A557-9A6A-4CEBB96F2859}|NTierArchitecture.DataAccsess\\NTierArchitecture.DataAccsess.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.dataaccsess\\ntierarchitecture.dataaccsess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{404A2BB1-BF4B-A557-9A6A-4CEBB96F2859}|NTierArchitecture.DataAccsess\\NTierArchitecture.DataAccsess.csproj|solutionrelative:ntierarchitecture.dataaccsess\\ntierarchitecture.dataaccsess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D61A825A-D643-84C9-2879-D50F20CD96A0}|NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.domain\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D61A825A-D643-84C9-2879-D50F20CD96A0}|NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj|solutionrelative:ntierarchitecture.domain\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,6 +35,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "NTierArchitecture.Business",
+              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Business\\NTierArchitecture.Business.csproj",
+              "RelativeDocumentMoniker": "NTierArchitecture.Business\\NTierArchitecture.Business.csproj",
+              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Business\\NTierArchitecture.Business.csproj",
+              "RelativeToolTip": "NTierArchitecture.Business\\NTierArchitecture.Business.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-10-08T13:31:10.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NTierArchitecture.DataAccsess",
+              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.DataAccsess\\NTierArchitecture.DataAccsess.csproj",
+              "RelativeDocumentMoniker": "NTierArchitecture.DataAccsess\\NTierArchitecture.DataAccsess.csproj",
+              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.DataAccsess\\NTierArchitecture.DataAccsess.csproj",
+              "RelativeToolTip": "NTierArchitecture.DataAccsess\\NTierArchitecture.DataAccsess.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-10-08T13:29:52.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Student.cs",
               "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Domain\\Entities\\Student.cs",
               "RelativeDocumentMoniker": "NTierArchitecture.Domain\\Entities\\Student.cs",
@@ -39,8 +73,8 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NTierArchitecture.Domain",
+              "DocumentIndex": 3,
+              "Title": "NTierArchitecture.Domain.csproj",
               "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj",
               "RelativeDocumentMoniker": "NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj",
               "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj",
@@ -52,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Main.Designer.cs",
               "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Presentation\\Main.Designer.cs",
               "RelativeDocumentMoniker": "NTierArchitecture.Presentation\\Main.Designer.cs",

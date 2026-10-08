@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "NTierArchitecture.Domain\\Entities\\Student.cs",
               "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Domain\\Entities\\Student.cs",
               "RelativeToolTip": "NTierArchitecture.Domain\\Entities\\Student.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-08T10:18:08.12Z",
               "EditorCaption": ""
@@ -40,11 +40,11 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "NTierArchitecture.Domain",
+              "Title": "NTierArchitecture.Domain.csproj",
               "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj",
               "RelativeDocumentMoniker": "NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj",
-              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj*",
-              "RelativeToolTip": "NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj*",
+              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj",
+              "RelativeToolTip": "NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-10-08T10:16:55.911Z",
