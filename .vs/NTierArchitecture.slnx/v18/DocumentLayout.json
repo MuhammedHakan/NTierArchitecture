@@ -3,8 +3,56 @@
   "WorkspaceRootPath": "C:\\Projects\\NTierArchitecture\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{404A2BB1-BF4B-A557-9A6A-4CEBB96F2859}|NTierArchitecture.DataAccsess\\NTierArchitecture.DataAccsess.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.dataaccsess\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{404A2BB1-BF4B-A557-9A6A-4CEBB96F2859}|NTierArchitecture.DataAccsess\\NTierArchitecture.DataAccsess.csproj|solutionrelative:ntierarchitecture.dataaccsess\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4B16B888-6D35-F6B7-F0B3-56EB4FC7CA69}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.business\\services\\studentservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B16B888-6D35-F6B7-F0B3-56EB4FC7CA69}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|solutionrelative:ntierarchitecture.business\\services\\studentservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B16B888-6D35-F6B7-F0B3-56EB4FC7CA69}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.business\\services\\teacherservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B16B888-6D35-F6B7-F0B3-56EB4FC7CA69}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|solutionrelative:ntierarchitecture.business\\services\\teacherservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B16B888-6D35-F6B7-F0B3-56EB4FC7CA69}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.business\\validators\\teachervalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B16B888-6D35-F6B7-F0B3-56EB4FC7CA69}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|solutionrelative:ntierarchitecture.business\\validators\\teachervalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B16B888-6D35-F6B7-F0B3-56EB4FC7CA69}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.business\\services\\classservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B16B888-6D35-F6B7-F0B3-56EB4FC7CA69}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|solutionrelative:ntierarchitecture.business\\services\\classservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B16B888-6D35-F6B7-F0B3-56EB4FC7CA69}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.business\\services\\lessonservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B16B888-6D35-F6B7-F0B3-56EB4FC7CA69}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|solutionrelative:ntierarchitecture.business\\services\\lessonservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B16B888-6D35-F6B7-F0B3-56EB4FC7CA69}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.business\\services\\discontinuityservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B16B888-6D35-F6B7-F0B3-56EB4FC7CA69}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|solutionrelative:ntierarchitecture.business\\services\\discontinuityservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B16B888-6D35-F6B7-F0B3-56EB4FC7CA69}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.business\\services\\examservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B16B888-6D35-F6B7-F0B3-56EB4FC7CA69}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|solutionrelative:ntierarchitecture.business\\services\\examservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B16B888-6D35-F6B7-F0B3-56EB4FC7CA69}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.business\\abstraction\\imanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B16B888-6D35-F6B7-F0B3-56EB4FC7CA69}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|solutionrelative:ntierarchitecture.business\\abstraction\\imanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B16B888-6D35-F6B7-F0B3-56EB4FC7CA69}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.business\\validators\\studentvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B16B888-6D35-F6B7-F0B3-56EB4FC7CA69}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|solutionrelative:ntierarchitecture.business\\validators\\studentvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D61A825A-D643-84C9-2879-D50F20CD96A0}|NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D61A825A-D643-84C9-2879-D50F20CD96A0}|NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj|solutionrelative:ntierarchitecture.domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{404A2BB1-BF4B-A557-9A6A-4CEBB96F2859}|NTierArchitecture.DataAccsess\\NTierArchitecture.DataAccsess.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.dataaccsess\\repostories\\genericrepostory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{404A2BB1-BF4B-A557-9A6A-4CEBB96F2859}|NTierArchitecture.DataAccsess\\NTierArchitecture.DataAccsess.csproj|solutionrelative:ntierarchitecture.dataaccsess\\repostories\\genericrepostory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{404A2BB1-BF4B-A557-9A6A-4CEBB96F2859}|NTierArchitecture.DataAccsess\\NTierArchitecture.DataAccsess.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.dataaccsess\\repostories\\studentrepostory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{404A2BB1-BF4B-A557-9A6A-4CEBB96F2859}|NTierArchitecture.DataAccsess\\NTierArchitecture.DataAccsess.csproj|solutionrelative:ntierarchitecture.dataaccsess\\repostories\\studentrepostory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{404A2BB1-BF4B-A557-9A6A-4CEBB96F2859}|NTierArchitecture.DataAccsess\\NTierArchitecture.DataAccsess.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.dataaccsess\\abstraction\\irepostery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{404A2BB1-BF4B-A557-9A6A-4CEBB96F2859}|NTierArchitecture.DataAccsess\\NTierArchitecture.DataAccsess.csproj|solutionrelative:ntierarchitecture.dataaccsess\\abstraction\\irepostery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{404A2BB1-BF4B-A557-9A6A-4CEBB96F2859}|NTierArchitecture.DataAccsess\\NTierArchitecture.DataAccsess.csproj|c:\\projects\\ntierarchitecture\\ntierarchitecture.dataaccsess\\migrations\\20261008140148_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,37 +70,154 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20261008140148_Initial.cs",
-              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.DataAccsess\\Migrations\\20261008140148_Initial.cs",
-              "RelativeDocumentMoniker": "NTierArchitecture.DataAccsess\\Migrations\\20261008140148_Initial.cs",
-              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.DataAccsess\\Migrations\\20261008140148_Initial.cs",
-              "RelativeToolTip": "NTierArchitecture.DataAccsess\\Migrations\\20261008140148_Initial.cs",
-              "ViewState": "AgIAAKkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "ExamServices.cs",
+              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Business\\Services\\ExamServices.cs",
+              "RelativeDocumentMoniker": "NTierArchitecture.Business\\Services\\ExamServices.cs",
+              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Business\\Services\\ExamServices.cs",
+              "RelativeToolTip": "NTierArchitecture.Business\\Services\\ExamServices.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwD8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-08T14:01:48.716Z",
+              "WhenOpened": "2026-10-09T13:32:07.904Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.DataAccsess\\Context\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "NTierArchitecture.DataAccsess\\Context\\AppDbContext.cs",
-              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.DataAccsess\\Context\\AppDbContext.cs",
-              "RelativeToolTip": "NTierArchitecture.DataAccsess\\Context\\AppDbContext.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAACRAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "DiscontinuityServices.cs",
+              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Business\\Services\\DiscontinuityServices.cs",
+              "RelativeDocumentMoniker": "NTierArchitecture.Business\\Services\\DiscontinuityServices.cs",
+              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Business\\Services\\DiscontinuityServices.cs",
+              "RelativeToolTip": "NTierArchitecture.Business\\Services\\DiscontinuityServices.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAkwD8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-08T13:49:06.158Z",
+              "WhenOpened": "2026-10-09T13:31:12.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LessonServices.cs",
+              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Business\\Services\\LessonServices.cs",
+              "RelativeDocumentMoniker": "NTierArchitecture.Business\\Services\\LessonServices.cs",
+              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Business\\Services\\LessonServices.cs",
+              "RelativeToolTip": "NTierArchitecture.Business\\Services\\LessonServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-09T13:30:16.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClassServices.cs",
+              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Business\\Services\\ClassServices.cs",
+              "RelativeDocumentMoniker": "NTierArchitecture.Business\\Services\\ClassServices.cs",
+              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Business\\Services\\ClassServices.cs",
+              "RelativeToolTip": "NTierArchitecture.Business\\Services\\ClassServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-09T13:29:35.775Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "TeacherValidator.cs",
+              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Business\\Validators\\TeacherValidator.cs",
+              "RelativeDocumentMoniker": "NTierArchitecture.Business\\Validators\\TeacherValidator.cs",
+              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Business\\Validators\\TeacherValidator.cs",
+              "RelativeToolTip": "NTierArchitecture.Business\\Validators\\TeacherValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-09T13:28:54.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TeacherServices.cs",
+              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Business\\Services\\TeacherServices.cs",
+              "RelativeDocumentMoniker": "NTierArchitecture.Business\\Services\\TeacherServices.cs",
+              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Business\\Services\\TeacherServices.cs",
+              "RelativeToolTip": "NTierArchitecture.Business\\Services\\TeacherServices.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAswBIAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-09T13:26:41.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentServices.cs",
+              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Business\\Services\\StudentServices.cs",
+              "RelativeDocumentMoniker": "NTierArchitecture.Business\\Services\\StudentServices.cs",
+              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Business\\Services\\StudentServices.cs",
+              "RelativeToolTip": "NTierArchitecture.Business\\Services\\StudentServices.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAwCcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-09T11:30:15.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Domain\\Entities\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "NTierArchitecture.Domain\\Entities\\BaseEntity.cs",
+              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Domain\\Entities\\BaseEntity.cs",
+              "RelativeToolTip": "NTierArchitecture.Domain\\Entities\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-09T12:56:40.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IManager.cs",
+              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Business\\Abstraction\\IManager.cs",
+              "RelativeDocumentMoniker": "NTierArchitecture.Business\\Abstraction\\IManager.cs",
+              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Business\\Abstraction\\IManager.cs",
+              "RelativeToolTip": "NTierArchitecture.Business\\Abstraction\\IManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-09T12:47:15.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StudentValidator.cs",
+              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Business\\Validators\\StudentValidator.cs",
+              "RelativeDocumentMoniker": "NTierArchitecture.Business\\Validators\\StudentValidator.cs",
+              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Business\\Validators\\StudentValidator.cs",
+              "RelativeToolTip": "NTierArchitecture.Business\\Validators\\StudentValidator.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-09T11:37:34.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "StudentRepostory.cs",
+              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.DataAccsess\\Repostories\\StudentRepostory.cs",
+              "RelativeDocumentMoniker": "NTierArchitecture.DataAccsess\\Repostories\\StudentRepostory.cs",
+              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.DataAccsess\\Repostories\\StudentRepostory.cs",
+              "RelativeToolTip": "NTierArchitecture.DataAccsess\\Repostories\\StudentRepostory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-09T11:11:41.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Main.Designer.cs",
               "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Presentation\\Main.Designer.cs",
               "RelativeDocumentMoniker": "NTierArchitecture.Presentation\\Main.Designer.cs",
@@ -60,7 +225,45 @@
               "RelativeToolTip": "NTierArchitecture.Presentation\\Main.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-08T07:30:19.218Z",
+              "WhenOpened": "2026-10-08T07:30:19.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GenericRepostory.cs",
+              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.DataAccsess\\Repostories\\GenericRepostory.cs",
+              "RelativeDocumentMoniker": "NTierArchitecture.DataAccsess\\Repostories\\GenericRepostory.cs",
+              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.DataAccsess\\Repostories\\GenericRepostory.cs",
+              "RelativeToolTip": "NTierArchitecture.DataAccsess\\Repostories\\GenericRepostory.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAewCgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-09T10:52:28.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IRepostery.cs",
+              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.DataAccsess\\Abstraction\\IRepostery.cs",
+              "RelativeDocumentMoniker": "NTierArchitecture.DataAccsess\\Abstraction\\IRepostery.cs",
+              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.DataAccsess\\Abstraction\\IRepostery.cs",
+              "RelativeToolTip": "NTierArchitecture.DataAccsess\\Abstraction\\IRepostery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-09T10:43:00.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "20261008140148_Initial.cs",
+              "DocumentMoniker": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.DataAccsess\\Migrations\\20261008140148_Initial.cs",
+              "RelativeDocumentMoniker": "NTierArchitecture.DataAccsess\\Migrations\\20261008140148_Initial.cs",
+              "ToolTip": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.DataAccsess\\Migrations\\20261008140148_Initial.cs",
+              "RelativeToolTip": "NTierArchitecture.DataAccsess\\Migrations\\20261008140148_Initial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T14:01:48.716Z",
               "EditorCaption": ""
             }
           ]
