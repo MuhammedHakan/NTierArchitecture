@@ -1,0 +1,52 @@
+
+# Build çıktıları
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+
+# Visual Studio kullanıcı ayarları
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio geçici dosyaları
+*.tmp_proj
+*.cache
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.VC.VC.opendb
+
+# Test sonuçları
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+
+# Publish çıktıları
+publish/
+[Pp]ublish/
+
+# Log dosyaları
+*.log
+
+# İşletim sistemi dosyaları
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Geçici dosyalar
+*.bak
+*.old
+*.orig
