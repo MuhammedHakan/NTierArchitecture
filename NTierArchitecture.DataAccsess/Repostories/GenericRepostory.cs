@@ -46,7 +46,16 @@ public class GenericRepostory<T>(AppDbContext context) : IRepository<T> where T 
     public void Update(T entity)
     {
         entity.UpdateDate = DateTime.Now;
+
+        // Hafızada (Local) aynı ID'ye sahip başka bir nesne takip ediliyorsa takibi bırak (AsNoTracking alternatifi)
+        var trackedEntity = _dbSet.Local.FirstOrDefault(x => x.ID == entity.ID);
+        if (trackedEntity != null)
+        {
+            _context.Entry(trackedEntity).State = EntityState.Detached;
+        }
+
         _dbSet.Update(entity);
         _context.SaveChanges();
     }
+
 }

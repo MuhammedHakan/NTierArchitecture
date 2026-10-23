@@ -1,0 +1,82 @@
+﻿using NTierArchitecture.Business.Services;
+using NTierArchitecture.DataAccsess.Context;
+using NTierArchitecture.DataAccsess.Repostories;
+using NTierArchitecture.Domain.Entities;
+
+namespace NTierArchitecture.Presentation.Forms
+{
+    public partial class Lesson_form : Form
+    {
+        LessonServices _lessonServices = new(new LessonRepostory(new AppDbContext()));
+        public Lesson_form()
+        {
+            InitializeComponent();
+        }
+        private void GetLessons()
+        {
+            lwLesson.Items.Clear();
+            _lessonServices?.GetAll()?.ToList().ForEach(c =>
+            {
+                lwLesson.Items.Add(c.ID.ToString());
+                lwLesson.Items[lwLesson.Items.Count - 1].SubItems.Add(c.Name);
+                lwLesson.Items[lwLesson.Items.Count - 1].SubItems.Add(c.WeeklyHour.ToString());
+            });
+
+        }
+        private void lwLesson_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lwLesson.SelectedItems.Count > 0)
+            {
+                int selectedLessonId = Convert.ToInt32(lwLesson.SelectedItems[0].Text);
+                Lesson selectedLesson = _lessonServices.GetById(selectedLessonId);
+                if (selectedLesson != null)
+                {
+                    tbLessonName.Text = selectedLesson.Name;
+                    tbWeeklyHour.Text = selectedLesson.WeeklyHour.ToString();
+                }
+            }
+        }
+
+        private void Lesson_form_Load(object sender, EventArgs e)
+        {
+            GetLessons();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            Lesson newLesson = new()
+            {
+                Name = tbLessonName.Text,
+                WeeklyHour = Convert.ToInt32(tbWeeklyHour.Text)
+            };
+            _lessonServices.Create(newLesson);
+            GetLessons();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (lwLesson.SelectedItems.Count > 0)
+            {
+                int selectedLessonId = Convert.ToInt32(lwLesson.SelectedItems[0].Text);
+                _lessonServices.DeleteById(selectedLessonId);
+                GetLessons();
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (lwLesson.SelectedItems.Count > 0)
+            {
+                int selectedLessonId = Convert.ToInt32(lwLesson.SelectedItems[0].Text);
+                Lesson lessonToUpdate = _lessonServices.GetById(selectedLessonId);
+                if (lessonToUpdate != null)
+                {
+                    lessonToUpdate.Name = tbLessonName.Text;
+                    lessonToUpdate.WeeklyHour = Convert.ToInt32(tbWeeklyHour.Text);
+                    _lessonServices.Update(lessonToUpdate);
+                    GetLessons();
+                }
+            }
+        }
+    }
+}

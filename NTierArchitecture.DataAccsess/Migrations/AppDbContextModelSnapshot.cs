@@ -205,8 +205,8 @@ namespace NTierArchitecture.DataAccsess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<string>("Branch")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<bool>("Branch")
+                        .HasColumnType("bit");
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");

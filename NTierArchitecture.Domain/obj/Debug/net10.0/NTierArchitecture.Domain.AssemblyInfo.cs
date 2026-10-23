@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NTierArchitecture.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f488c539504eabde9c0b8c17379e45058b543c64")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03e1863b07bc426b0a2dcf2f83604947b972072e")]
 [assembly: System.Reflection.AssemblyProductAttribute("NTierArchitecture.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NTierArchitecture.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

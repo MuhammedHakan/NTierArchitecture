@@ -17,9 +17,8 @@ public class ExamServices(ExamRepostory examRepostory) : IManager<Exam>
             throw new Exception("Entity already exists.");
 
         ValidationResult result = new ExamValidator().Validate(entity);
-
         if (!result.IsValid)
-            throw new Exception("Invalid entity.");
+            throw new Exception(string.Join("\n", result.Errors));
         _examRepostory.Create(entity);
     }
 

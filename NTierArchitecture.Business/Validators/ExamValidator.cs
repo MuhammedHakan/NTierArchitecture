@@ -14,8 +14,7 @@ public class ExamValidator : AbstractValidator<Exam>
             .NotEmpty().WithMessage("StudentID is required.")
             .GreaterThan(0).WithMessage("StudentID must be greater than 0.");
         RuleFor(Exam => Exam.ExamDate)
-            .NotEmpty().WithMessage("Exam Date is required.")
-            .LessThan(DateTime.Now).WithMessage("Exam Date must be in the past.");
+            .NotEmpty().WithMessage("Exam Date is required.");
         RuleFor(Exam => Exam.Duration)
             .NotEmpty().WithMessage("Duration is required.")
             .GreaterThan(0).WithMessage("Duration must be greater than 0.");
@@ -24,6 +23,6 @@ public class ExamValidator : AbstractValidator<Exam>
             .GreaterThanOrEqualTo(0).WithMessage("Note must be greater than or equal to 0.")
             .LessThanOrEqualTo(100).WithMessage("Note must be less than or equal to 100.");
         RuleFor(Exam => Exam.IsSecondary)
-            .NotEmpty().WithMessage("IsSecondary is required.");
+            .NotNull().WithMessage("IsSecondary is required.");
     }
 }

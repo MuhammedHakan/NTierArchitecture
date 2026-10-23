@@ -16,4 +16,12 @@ public class AppDbContext : DbContext
     {
         optionsBuilder.UseSqlServer("Server=.\\MSSQLSERVER02;Database=NTierArchitectureDb;Integrated Security=True;Trust Server Certificate=True;");
     }
+    override protected void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Student>().Navigation(s => s.Class).AutoInclude();
+        modelBuilder.Entity<Teacher>().Navigation(t => t.Lesson).AutoInclude();
+        modelBuilder.Entity<Discontinuity>().Navigation(d => d.Student).AutoInclude();
+        modelBuilder.Entity<Exam>().Navigation(e => e.Student).AutoInclude();
+        modelBuilder.Entity<Exam>().Navigation(e => e.Lesson).AutoInclude();
+    }
 }

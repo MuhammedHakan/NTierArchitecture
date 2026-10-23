@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NTierArchitecture.Business\NTierArchitecture.Business.csproj" />
+    <ProjectReference Include="..\NTierArchitecture.DataAccsess\NTierArchitecture.DataAccsess.csproj" />
     <ProjectReference Include="..\NTierArchitecture.Domain\NTierArchitecture.Domain.csproj" />
   </ItemGroup>
 

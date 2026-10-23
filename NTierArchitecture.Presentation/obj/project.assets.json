@@ -3514,6 +3514,7 @@
     "net10.0-windows": [
       "Microsoft.EntityFrameworkCore.Design >= 10.0.12",
       "NTierArchitecture.Business >= 1.0.0",
+      "NTierArchitecture.DataAccsess >= 1.0.0",
       "NTierArchitecture.Domain >= 1.0.0"
     ]
   },
@@ -3553,6 +3554,9 @@
           "projectReferences": {
             "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Business\\NTierArchitecture.Business.csproj": {
               "projectPath": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Business\\NTierArchitecture.Business.csproj"
+            },
+            "C:\\Projects\\NTierArchitecture\\NTierArchitecture.DataAccsess\\NTierArchitecture.DataAccsess.csproj": {
+              "projectPath": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.DataAccsess\\NTierArchitecture.DataAccsess.csproj"
             },
             "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj": {
               "projectPath": "C:\\Projects\\NTierArchitecture\\NTierArchitecture.Domain\\NTierArchitecture.Domain.csproj"

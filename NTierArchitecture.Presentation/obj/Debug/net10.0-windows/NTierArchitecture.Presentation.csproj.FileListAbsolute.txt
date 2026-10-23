@@ -162,3 +162,9 @@ C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\bin\Debug\net10.0-w
 C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\bin\Debug\net10.0-windows\NTierArchitecture.Domain.pdb
 C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\bin\Debug\net10.0-windows\NTierArchitecture.DataAccsess.pdb
 C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\obj\Debug\net10.0-windows\NTierArchitecture.Presentation.csproj.AssemblyReference.cache
+C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\obj\Debug\net10.0-windows\NTierArchitecture.Presentation.Forms.ClassForm.resources
+C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\obj\Debug\net10.0-windows\NTierArchitecture.Presentation.Forms.Student_form.resources
+C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\obj\Debug\net10.0-windows\NTierArchitecture.Presentation.Forms.Teacher_form.resources
+C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\obj\Debug\net10.0-windows\NTierArchitecture.Presentation.Forms.Lesson_form.resources
+C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\obj\Debug\net10.0-windows\NTierArchitecture.Presentation.Forms.Discontinuity_form.resources
+C:\Projects\NTierArchitecture\NTierArchitecture.Presentation\obj\Debug\net10.0-windows\NTierArchitecture.Presentation.Forms.Exam_form.resources
