@@ -55,7 +55,7 @@ namespace NTierArchitecture.Presentation
                 services.AddTransient<Student_form>();
                 services.AddTransient<Lesson_form>();
                 services.AddTransient<Teacher_form>();
-                services.AddTransient<DiscontinuityForm>();
+                services.AddTransient<Discontinuity_form>();
                 services.AddTransient<Exam_form>();
                 #endregion
             })
