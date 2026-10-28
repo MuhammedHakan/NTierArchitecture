@@ -24,3 +24,9 @@ publish/
 Thumbs.db
 .DS_Store
 
+# Presentation ayar dosyaları
+NTierArchitecture.Presentation/appsettings.json
+NTierArchitecture.Presentation/appsettings.*.json
+
+# Örnek yapılandırma dosyası Git'te kalsın
+!NTierArchitecture.Presentation/appsettings.example.json
