@@ -1,16 +1,17 @@
 ﻿using NTierArchitecture.Business.Services;
-using NTierArchitecture.DataAccsess.Context;
-using NTierArchitecture.DataAccsess.Repostories;
 using NTierArchitecture.Domain.Entities;
 namespace NTierArchitecture.Presentation.Forms;
 
 public partial class ClassForm : Form
 {
-    ClassServices _classServices = new(new ClassRepostory(new AppDbContext()));
-    public ClassForm()
+
+    private readonly ClassServices _classServices;
+    public ClassForm(ClassServices classServices)
     {
         InitializeComponent();
+        _classServices = classServices;
     }
+
     int selectedClassId = 0;
     private void GetClasses()
     {

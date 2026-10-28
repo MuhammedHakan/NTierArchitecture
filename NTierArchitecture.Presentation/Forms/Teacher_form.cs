@@ -7,12 +7,19 @@ namespace NTierArchitecture.Presentation.Forms
 {
     public partial class Teacher_form : Form
     {
-        TeacherServices _teacherServices = new(new TeacherRepostory(new AppDbContext()));
-        LessonServices _lessonServices = new(new LessonRepostory(new AppDbContext()));
-        public Teacher_form()
+        private readonly TeacherServices _teacherServices;
+        private readonly LessonServices _lessonServices;
+        public Teacher_form(TeacherServices teacherServices, LessonServices lessonServices)
         {
             InitializeComponent();
+            _teacherServices = teacherServices;
+            _lessonServices = lessonServices;
         }
+
+        public Teacher_form()
+        {
+        }
+
         private void GetAllTeachers()
         {
             lwTeacher.Items.Clear();

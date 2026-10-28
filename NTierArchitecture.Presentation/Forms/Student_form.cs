@@ -7,12 +7,19 @@ namespace NTierArchitecture.Presentation.Forms
 {
     public partial class Student_form : Form
     {
-        StudentServices _studentServices = new(new StudentRepostory(new AppDbContext()));
-        ClassServices _classServices = new(new ClassRepostory(new AppDbContext()));
-        public Student_form()
+        private readonly StudentServices _studentServices;
+        private readonly ClassServices _classServices;
+        public Student_form(StudentServices studentServices, ClassServices classServices)
         {
             InitializeComponent();
+            _studentServices = studentServices;
+            _classServices = classServices;
         }
+
+        public Student_form()
+        {
+        }
+
         Student selectedStudent = new();
         private void GetStudents()
         {

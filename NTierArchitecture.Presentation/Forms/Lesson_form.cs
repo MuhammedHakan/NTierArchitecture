@@ -7,11 +7,17 @@ namespace NTierArchitecture.Presentation.Forms
 {
     public partial class Lesson_form : Form
     {
-        LessonServices _lessonServices = new(new LessonRepostory(new AppDbContext()));
-        public Lesson_form()
+        private readonly LessonServices _lessonServices;
+        public Lesson_form(LessonServices _lessonServices)
         {
             InitializeComponent();
+            this._lessonServices = _lessonServices;
         }
+
+        public Lesson_form()
+        {
+        }
+
         private void GetLessons()
         {
             lwLesson.Items.Clear();

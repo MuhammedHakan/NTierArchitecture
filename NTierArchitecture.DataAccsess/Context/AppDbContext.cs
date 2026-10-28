@@ -4,7 +4,7 @@ using NTierArchitecture.Domain.Entities;
 
 namespace NTierArchitecture.DataAccsess.Context;
 
-public class AppDbContext : DbContext
+public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {
     public DbSet<Class> Classes  { get; set; }
     public DbSet<Student> Students { get; set; }
@@ -12,10 +12,6 @@ public class AppDbContext : DbContext
     public DbSet<Lesson> Lessons { get; set; }
     public DbSet<Exam> Exams { get; set; }
     public DbSet<Discontinuity> Discontinuities { get; set; }
-    override protected void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        optionsBuilder.UseSqlServer("Server=.\\MSSQLSERVER02;Database=NTierArchitectureDb;Integrated Security=True;Trust Server Certificate=True;");
-    }
     override protected void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Student>().Navigation(s => s.Class).AutoInclude();

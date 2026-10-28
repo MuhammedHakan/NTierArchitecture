@@ -7,13 +7,21 @@ namespace NTierArchitecture.Presentation.Forms
 {
     public partial class Exam_form : Form
     {
-        StudentServices _studentServices = new(new StudentRepository(new AppDbContext()));
-        LessonServices _lessonServices = new(new LessonRepository(new AppDbContext()));
-        ExamServices _examServices = new(new ExamRepository(new AppDbContext()));
-        public Exam_form()
+        private readonly ExamServices _examServices;
+        private readonly StudentServices _studentServices;
+        private readonly LessonServices _lessonServices;
+        public Exam_form(ExamServices examServices, StudentServices studentServices, LessonServices lessonServices)
         {
             InitializeComponent();
+            _examServices = examServices;
+            _studentServices = studentServices;
+            _lessonServices = lessonServices;
         }
+
+        public Exam_form()
+        {
+        }
+
         private void GetAllExams()
         {
             lwExam.Items.Clear();

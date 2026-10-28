@@ -8,12 +8,19 @@ namespace NTierArchitecture.Presentation.Forms
 {
     public partial class Discontinuity_form : Form
     {
-        DiscontinuityServices _discontinuityServices = new(new DiscontinuityRepostory(new AppDbContext()));
-        StudentServices _studentServices = new(new StudentRepostory(new AppDbContext()));
-        public Discontinuity_form()
+        private readonly DiscontinuityServices _discontinuityServices;
+        private readonly StudentServices _studentServices;
+        public Discontinuity_form(DiscontinuityServices discontinuityServices, StudentServices studentServices)
         {
             InitializeComponent();
+            _discontinuityServices = discontinuityServices;
+            _studentServices = studentServices;
         }
+
+        public Discontinuity_form()
+        {
+        }
+
         Discontinuity selectedDiscontinuity = new();
         private void GetDiscontinuities()
         {

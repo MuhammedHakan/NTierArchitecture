@@ -1,44 +1,68 @@
+
+using Microsoft.Extensions.DependencyInjection;
 using NTierArchitecture.Presentation.Forms;
 
 namespace NTierArchitecture.Presentation
 {
     public partial class Main : Form
     {
-        public Main()
+        private readonly IServiceScopeFactory _scopeFactory;
+
+        public Main(IServiceScopeFactory scopeFactory)
         {
             InitializeComponent();
+            _scopeFactory = scopeFactory;
         }
 
-        private void btnClassManegmentForm_Click(object sender, EventArgs e)
+        private void OpenForm<TForm>() where TForm : Form
         {
-            ClassForm classForm = new();
-            classForm.Show();
+            var scope = _scopeFactory.CreateScope();
+
+            try
+            {
+                var form = scope.ServiceProvider
+                    .GetRequiredService<TForm>();
+
+                form.FormClosed += (s, e) => scope.Dispose();
+                form.Show();
+            }
+            catch
+            {
+                scope.Dispose();
+                throw;
+            }
+        }
+
+        private void btnClassManegmentForm_Click(
+            object sender, EventArgs e)
+        {
+            OpenForm<ClassForm>();
         }
 
         private void btnStudent_Click(object sender, EventArgs e)
         {
-            Student_form studentForm = new();
-            studentForm.Show();
+            OpenForm<Student_form>();
         }
 
         private void btnLesson_Click(object sender, EventArgs e)
         {
-            Lesson_form lessonForm = new(); lessonForm.Show();
+            OpenForm<Lesson_form>();
         }
 
         private void btnTeacher_Click(object sender, EventArgs e)
         {
-            Teacher_form teacherForm = new(); teacherForm.Show();
+            OpenForm<Teacher_form>();
         }
 
-        private void btnDiscontinuity_Click(object sender, EventArgs e)
+        private void btnDiscontinuity_Click(
+            object sender, EventArgs e)
         {
-            Discontinuity_form disconyinuityForm = new(); disconyinuityForm.Show();
+            OpenForm<Discontinuity_form>();
         }
 
         private void btnExam_Click(object sender, EventArgs e)
         {
-            Exam_form examForm = new(); examForm.Show();
+            OpenForm<Exam_form>();
         }
     }
 }
