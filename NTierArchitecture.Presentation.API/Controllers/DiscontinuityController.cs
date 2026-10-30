@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using NTierArchitecture.Business.Services;
 using NTierArchitecture.Domain.Entities;
 using NTierArchitecture.Presentation.API.DTOs;
@@ -7,13 +8,13 @@ namespace NTierArchitecture.Presentation.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DiscontinuityController(DiscontinuityServices discontinuityServices) : ControllerBase
+    public class DiscontinuityController(DiscontinuityServices discontinuityServices, IMapper mapper) : ControllerBase
     {
         [HttpGet]
         public IActionResult GetDiscontinuities()
         {
             var discontinuities = discontinuityServices.GetAll() ?? [];
-            List<DiscontinuityDTO> discontinuityDTOs = discontinuities.Select(ToDTO).ToList();
+            var discontinuityDTOs = mapper.Map<List<DiscontinuityDTO>>(discontinuities);
             return Ok(discontinuityDTOs);
         }
 
@@ -24,29 +25,14 @@ namespace NTierArchitecture.Presentation.API.Controllers
             if (discontinuity == null)
                 return NotFound($"Discontinuity with ID {id} was not found.");
 
-            return Ok(ToDTO(discontinuity));
+            return Ok(mapper.Map<DiscontinuityDTO>(discontinuity));
         }
 
         [HttpPost]
         public IActionResult AddDiscontinuity(DiscontinuityDTO discontinuityDTO)
         {
-            var discontinuity = new Discontinuity
-            {
-                StudentID = discontinuityDTO.StudentID,
-                DateofDiscontinuity = discontinuityDTO.DateofDiscontinuity,
-                Days = discontinuityDTO.Days,
-                Excuse = discontinuityDTO.Excuse
-            };
-
-            try
-            {
-                discontinuityServices.Create(discontinuity);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-
+            var discontinuity = mapper.Map<Discontinuity>(discontinuityDTO);
+            discontinuityServices.Create(discontinuity);
             return Ok("Discontinuity added successfully.");
         }
 
@@ -57,20 +43,10 @@ namespace NTierArchitecture.Presentation.API.Controllers
             if (discontinuity == null)
                 return NotFound($"Discontinuity with ID {id} was not found.");
 
-            discontinuity.StudentID = discontinuityDTO.StudentID;
-            discontinuity.DateofDiscontinuity = discontinuityDTO.DateofDiscontinuity;
-            discontinuity.Days = discontinuityDTO.Days;
-            discontinuity.Excuse = discontinuityDTO.Excuse;
+            mapper.Map(discontinuityDTO, discontinuity);
+            discontinuity.ID = id;
 
-            try
-            {
-                discontinuityServices.Update(discontinuity);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-
+            discontinuityServices.Update(discontinuity);
             return Ok("Discontinuity updated successfully.");
         }
 
@@ -81,26 +57,8 @@ namespace NTierArchitecture.Presentation.API.Controllers
             if (discontinuity == null)
                 return NotFound($"Discontinuity with ID {id} was not found.");
 
-            try
-            {
-                discontinuityServices.DeleteById(id);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-
+            discontinuityServices.DeleteById(id);
             return Ok("Discontinuity deleted successfully.");
         }
-
-        private static DiscontinuityDTO ToDTO(Discontinuity discontinuity) => new()
-        {
-            ID = discontinuity.ID,
-            StudentID = discontinuity.StudentID,
-            DateofDiscontinuity = discontinuity.DateofDiscontinuity,
-            Days = discontinuity.Days,
-            Excuse = discontinuity.Excuse,
-            StudentName = discontinuity.Student?.Name
-        };
     }
 }

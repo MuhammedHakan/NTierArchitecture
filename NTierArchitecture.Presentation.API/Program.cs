@@ -3,11 +3,16 @@ using Microsoft.OpenApi;
 using NTierArchitecture.Business.Services;
 using NTierArchitecture.DataAccsess.Context;
 using NTierArchitecture.DataAccsess.Repostories;
+using NTierArchitecture.Presentation.API.Middlewares;
+using NTierArchitecture.Presentation.API.Mapping;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
+
+// AutoMapper
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 // Built-in OpenAPI document (Development ortaminda /openapi/v1.json)
 builder.Services.AddOpenApi();
@@ -41,6 +46,9 @@ builder.Services.AddScoped<DiscontinuityServices>();
 builder.Services.AddScoped<ExamRepostory>();
 builder.Services.AddScoped<ExamServices>();
 var app = builder.Build();
+
+// Global Exception Handling Middleware
+app.UseGlobalExceptionHandler();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

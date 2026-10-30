@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using NTierArchitecture.Business.Services;
 using NTierArchitecture.Domain.Entities;
 using NTierArchitecture.Presentation.API.DTOs;
@@ -7,13 +8,13 @@ namespace NTierArchitecture.Presentation.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ExamController(ExamServices examServices) : ControllerBase
+    public class ExamController(ExamServices examServices, IMapper mapper) : ControllerBase
     {
         [HttpGet]
         public IActionResult GetExams()
         {
             var exams = examServices.GetAll() ?? [];
-            List<ExamDTO> examDTOs = exams.Select(ToDTO).ToList();
+            var examDTOs = mapper.Map<List<ExamDTO>>(exams);
             return Ok(examDTOs);
         }
 
@@ -24,31 +25,14 @@ namespace NTierArchitecture.Presentation.API.Controllers
             if (exam == null)
                 return NotFound($"Exam with ID {id} was not found.");
 
-            return Ok(ToDTO(exam));
+            return Ok(mapper.Map<ExamDTO>(exam));
         }
 
         [HttpPost]
         public IActionResult AddExam(ExamDTO examDTO)
         {
-            var exam = new Exam
-            {
-                LessonID = examDTO.LessonID,
-                StudentID = examDTO.StudentID,
-                ExamDate = examDTO.ExamDate,
-                Duration = examDTO.Duration,
-                IsSecondary = examDTO.IsSecondary,
-                Note = examDTO.Note
-            };
-
-            try
-            {
-                examServices.Create(exam);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-
+            var exam = mapper.Map<Exam>(examDTO);
+            examServices.Create(exam);
             return Ok("Exam added successfully.");
         }
 
@@ -59,22 +43,10 @@ namespace NTierArchitecture.Presentation.API.Controllers
             if (exam == null)
                 return NotFound($"Exam with ID {id} was not found.");
 
-            exam.LessonID = examDTO.LessonID;
-            exam.StudentID = examDTO.StudentID;
-            exam.ExamDate = examDTO.ExamDate;
-            exam.Duration = examDTO.Duration;
-            exam.IsSecondary = examDTO.IsSecondary;
-            exam.Note = examDTO.Note;
+            mapper.Map(examDTO, exam);
+            exam.ID = id;
 
-            try
-            {
-                examServices.Update(exam);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-
+            examServices.Update(exam);
             return Ok("Exam updated successfully.");
         }
 
@@ -85,29 +57,8 @@ namespace NTierArchitecture.Presentation.API.Controllers
             if (exam == null)
                 return NotFound($"Exam with ID {id} was not found.");
 
-            try
-            {
-                examServices.DeleteById(id);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-
+            examServices.DeleteById(id);
             return Ok("Exam deleted successfully.");
         }
-
-        private static ExamDTO ToDTO(Exam exam) => new()
-        {
-            ID = exam.ID,
-            LessonID = exam.LessonID,
-            StudentID = exam.StudentID,
-            ExamDate = exam.ExamDate,
-            Duration = exam.Duration,
-            IsSecondary = exam.IsSecondary,
-            Note = exam.Note,
-            StudentName = exam.Student?.Name,
-            LessonName = exam.Lesson?.Name
-        };
     }
 }

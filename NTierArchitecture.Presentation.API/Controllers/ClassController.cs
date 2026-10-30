@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using NTierArchitecture.Business.Services;
 using NTierArchitecture.Domain.Entities;
 using NTierArchitecture.Presentation.API.DTOs;
@@ -7,13 +8,13 @@ namespace NTierArchitecture.Presentation.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ClassController(ClassServices classServices) : ControllerBase
+    public class ClassController(ClassServices classServices, IMapper mapper) : ControllerBase
     {
         [HttpGet]
         public IActionResult GetClasses()
         {
             var classes = classServices.GetAll() ?? [];
-            List<ClassDTO> classDTOs = classes.Select(ToDTO).ToList();
+            var classDTOs = mapper.Map<List<ClassDTO>>(classes);
             return Ok(classDTOs);
         }
 
@@ -24,27 +25,14 @@ namespace NTierArchitecture.Presentation.API.Controllers
             if (entity == null)
                 return NotFound($"Class with ID {id} was not found.");
 
-            return Ok(ToDTO(entity));
+            return Ok(mapper.Map<ClassDTO>(entity));
         }
 
         [HttpPost]
         public IActionResult AddClass(ClassDTO classDTO)
         {
-            var entity = new Class
-            {
-                Name = classDTO.Name,
-                Capacity = classDTO.Capacity
-            };
-
-            try
-            {
-                classServices.Create(entity);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-
+            var entity = mapper.Map<Class>(classDTO);
+            classServices.Create(entity);
             return Ok("Class added successfully.");
         }
 
@@ -55,18 +43,10 @@ namespace NTierArchitecture.Presentation.API.Controllers
             if (entity == null)
                 return NotFound($"Class with ID {id} was not found.");
 
-            entity.Name = classDTO.Name;
-            entity.Capacity = classDTO.Capacity;
+            mapper.Map(classDTO, entity);
+            entity.ID = id;
 
-            try
-            {
-                classServices.Update(entity);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-
+            classServices.Update(entity);
             return Ok("Class updated successfully.");
         }
 
@@ -77,23 +57,8 @@ namespace NTierArchitecture.Presentation.API.Controllers
             if (entity == null)
                 return NotFound($"Class with ID {id} was not found.");
 
-            try
-            {
-                classServices.DeleteById(id);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-
+            classServices.DeleteById(id);
             return Ok("Class deleted successfully.");
         }
-
-        private static ClassDTO ToDTO(Class entity) => new()
-        {
-            ID = entity.ID,
-            Name = entity.Name,
-            Capacity = entity.Capacity
-        };
     }
 }
