@@ -51,6 +51,7 @@
             btnDelete = new Button();
             btnSave = new Button();
             tbNote = new TextBox();
+            tbError = new TextBox();
             SuspendLayout();
             // 
             // lwExam
@@ -130,6 +131,7 @@
             btnUpdate.TabIndex = 17;
             btnUpdate.Text = "Güncelle";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // label2
             // 
@@ -209,6 +211,7 @@
             btnDelete.TabIndex = 28;
             btnDelete.Text = "Sil";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnSave
             // 
@@ -227,11 +230,20 @@
             tbNote.Size = new Size(125, 27);
             tbNote.TabIndex = 30;
             // 
+            // tbError
+            // 
+            tbError.Location = new Point(269, 300);
+            tbError.Multiline = true;
+            tbError.Name = "tbError";
+            tbError.Size = new Size(212, 85);
+            tbError.TabIndex = 31;
+            // 
             // Exam_form
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(tbError);
             Controls.Add(tbNote);
             Controls.Add(btnSave);
             Controls.Add(btnDelete);
@@ -281,5 +293,6 @@
         private Button btnDelete;
         private Button btnSave;
         private TextBox tbNote;
+        private TextBox tbError;
     }
 }

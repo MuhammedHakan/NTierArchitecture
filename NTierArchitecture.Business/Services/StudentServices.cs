@@ -19,7 +19,7 @@ public class StudentServices(StudentRepostory studentRepostory) : IManager<Stude
         ValidationResult result = new StudentValidator().Validate(entity);
 
         if (!result.IsValid)
-            throw new Exception("Invalid entity.");
+            throw new Exception(string.Join("\n", result.Errors));
         _studentRepostory.Create(entity);
     }
 

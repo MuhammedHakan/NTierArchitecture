@@ -19,7 +19,7 @@ public class ClassServices(ClassRepostory classRepostory) : IManager<Class>
         ValidationResult result = new ClassValidator().Validate(entity);
 
         if (!result.IsValid)
-            throw new Exception("Invalid entity.");
+            throw new Exception(string.Join("\n", result.Errors));
         _classRepostory.Create(entity);
     }
 

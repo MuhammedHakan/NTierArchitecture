@@ -19,7 +19,7 @@ public class TeacherServices(TeacherRepostory teacherRepostory) : IManager<Teach
         ValidationResult result = new TeacherValidator().Validate(entity);
 
         if (!result.IsValid)
-            throw new Exception("Invalid entity.");
+            throw new Exception(string.Join("\n", result.Errors));
         _teacherRepostory.Create(entity);
     }
 

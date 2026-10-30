@@ -19,7 +19,7 @@ public class LessonServices(LessonRepostory lessonRepostory) : IManager<Lesson>
         ValidationResult result = new LessonValidator().Validate(entity);
 
         if (!result.IsValid)
-            throw new Exception("Invalid entity.");
+            throw new Exception(string.Join("\n", result.Errors));
         _lessonRepostory.Create(entity);
     }
 

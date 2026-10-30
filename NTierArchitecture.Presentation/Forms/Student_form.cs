@@ -1,6 +1,4 @@
 ﻿using NTierArchitecture.Business.Services;
-using NTierArchitecture.DataAccsess.Context;
-using NTierArchitecture.DataAccsess.Repostories;
 using NTierArchitecture.Domain.Entities;
 
 namespace NTierArchitecture.Presentation.Forms
@@ -14,10 +12,6 @@ namespace NTierArchitecture.Presentation.Forms
             InitializeComponent();
             _studentServices = studentServices;
             _classServices = classServices;
-        }
-
-        public Student_form()
-        {
         }
 
         Student selectedStudent = new();
@@ -53,25 +47,39 @@ namespace NTierArchitecture.Presentation.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Student newStudent = new()
+            try
             {
-                Name = tbStudentName.Text,
-                Phone = tbStudent.Text,
-                ClassID = Convert.ToInt32(cbStudentClass.SelectedValue),
-                DateOfBirth = dateTimePicker1.Value,
-                Gender = rbStudentMale.Checked
-            };
-            _studentServices.Create(newStudent);
-            GetStudents();
+                Student newStudent = new()
+                {
+                    Name = tbStudentName.Text,
+                    Phone = tbStudent.Text,
+                    ClassID = Convert.ToInt32(cbStudentClass.SelectedValue),
+                    DateOfBirth = dateTimePicker1.Value,
+                    Gender = rbStudentMale.Checked
+                };
+                _studentServices.Create(newStudent);
+                GetStudents();
+            }
+            catch (Exception ex)
+            {
+                tbError.Text = ex.Message;
+            }
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (lwLesson.SelectedItems.Count > 0)
+
+            try
             {
+
                 Student selectedStudent = _studentServices.GetById(Convert.ToInt32(lwLesson.SelectedItems[0].Text));
                 _studentServices.DeleteById(selectedStudent!.ID);
                 GetStudents();
+            }
+            catch (Exception ex)
+            {
+                tbError.Text = ex.Message;
             }
         }
 

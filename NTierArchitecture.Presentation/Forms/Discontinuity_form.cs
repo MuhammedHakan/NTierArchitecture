@@ -47,59 +47,87 @@ namespace NTierArchitecture.Presentation.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Discontinuity newDiscontinuity = new()
+            try
             {
-                StudentID = Convert.ToInt32(cbStudent.SelectedValue),
-                DateofDiscontinuity = dtDiscontinuityDate.Value,
-                Days = Convert.ToInt32(tbDiscontinuityDays.Text),
-                Excuse = rbExcuse1.Checked
-            };
-            _discontinuityServices.Create(newDiscontinuity);
-            GetDiscontinuities();
+                Discontinuity newDiscontinuity = new()
+                {
+                    StudentID = Convert.ToInt32(cbStudent.SelectedValue),
+                    DateofDiscontinuity = dtDiscontinuityDate.Value,
+                    Days = Convert.ToInt32(tbDiscontinuityDays.Text),
+                    Excuse = rbExcuse1.Checked
+                };
+                _discontinuityServices.Create(newDiscontinuity);
+                GetDiscontinuities();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (lwDiscontinuity.SelectedItems.Count > 0)
+            try
             {
-                int selectedDiscontinuityId = Convert.ToInt32(lwDiscontinuity.SelectedItems[0].Text);
-                _discontinuityServices.DeleteById(selectedDiscontinuityId);
-                GetDiscontinuities();
+                if (lwDiscontinuity.SelectedItems.Count > 0)
+                {
+                    int selectedDiscontinuityId = Convert.ToInt32(lwDiscontinuity.SelectedItems[0].Text);
+                    _discontinuityServices.DeleteById(selectedDiscontinuityId);
+                    GetDiscontinuities();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (lwDiscontinuity.SelectedItems.Count > 0)
+            try
             {
-                int selectedDiscontinuityId = Convert.ToInt32(lwDiscontinuity.SelectedItems[0].Text);
-                var selectedDiscontinuity = _discontinuityServices.GetById(selectedDiscontinuityId);
-                if (selectedDiscontinuity != null)
+                if (lwDiscontinuity.SelectedItems.Count > 0)
                 {
-                    selectedDiscontinuity.StudentID = Convert.ToInt32(cbStudent.SelectedValue);
-                    selectedDiscontinuity.DateofDiscontinuity = dtDiscontinuityDate.Value;
-                    selectedDiscontinuity.Days = Convert.ToInt32(tbDiscontinuityDays.Text);
-                    selectedDiscontinuity.Excuse = rbExcuse1.Checked;
-                    _discontinuityServices.Update(selectedDiscontinuity);
-                    GetDiscontinuities();
+                    int selectedDiscontinuityId = Convert.ToInt32(lwDiscontinuity.SelectedItems[0].Text);
+                    var selectedDiscontinuity = _discontinuityServices.GetById(selectedDiscontinuityId);
+                    if (selectedDiscontinuity != null)
+                    {
+                        selectedDiscontinuity.StudentID = Convert.ToInt32(cbStudent.SelectedValue);
+                        selectedDiscontinuity.DateofDiscontinuity = dtDiscontinuityDate.Value;
+                        selectedDiscontinuity.Days = Convert.ToInt32(tbDiscontinuityDays.Text);
+                        selectedDiscontinuity.Excuse = rbExcuse1.Checked;
+                        _discontinuityServices.Update(selectedDiscontinuity);
+                        GetDiscontinuities();
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void lwDiscontinuity_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lwDiscontinuity.SelectedItems.Count > 0)
+            try
             {
-                int selectedDiscontinuityId = Convert.ToInt32(lwDiscontinuity.SelectedItems[0].Text);
-                var selectedDiscontinuity = _discontinuityServices.GetById(selectedDiscontinuityId);
-                if (selectedDiscontinuity != null)
+                if (lwDiscontinuity.SelectedItems.Count > 0)
                 {
-                    cbStudent.SelectedValue = selectedDiscontinuity.StudentID;
-                    dtDiscontinuityDate.Value = selectedDiscontinuity.DateofDiscontinuity;
-                    tbDiscontinuityDays.Text = selectedDiscontinuity.Days.ToString();
-                    rbExcuse1.Checked = selectedDiscontinuity.Excuse;
-                    rbExcuse2.Checked = !selectedDiscontinuity.Excuse;
+                    int selectedDiscontinuityId = Convert.ToInt32(lwDiscontinuity.SelectedItems[0].Text);
+                    var selectedDiscontinuity = _discontinuityServices.GetById(selectedDiscontinuityId);
+                    if (selectedDiscontinuity != null)
+                    {
+                        cbStudent.SelectedValue = selectedDiscontinuity.StudentID;
+                        dtDiscontinuityDate.Value = selectedDiscontinuity.DateofDiscontinuity;
+                        tbDiscontinuityDays.Text = selectedDiscontinuity.Days.ToString();
+                        rbExcuse1.Checked = selectedDiscontinuity.Excuse;
+                        rbExcuse2.Checked = !selectedDiscontinuity.Excuse;
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

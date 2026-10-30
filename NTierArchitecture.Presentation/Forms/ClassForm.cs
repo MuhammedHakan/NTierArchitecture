@@ -30,13 +30,20 @@ public partial class ClassForm : Form
 
     private void btnSave_Click(object sender, EventArgs e)
     {
-        Class newClass = new()
+        try
         {
-            Name = tbClass.Text,
-            Capacity = Convert.ToInt32(tbCapacity.Text)
-        };
-        _classServices.Create(newClass);
-        GetClasses();
+            Class newClass = new()
+            {
+                Name = tbClass.Text,
+                Capacity = Convert.ToInt32(tbCapacity.Text)
+            };
+            _classServices.Create(newClass);
+            GetClasses();
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 
     private void ClassForm_Load(object sender, EventArgs e)
@@ -57,26 +64,40 @@ public partial class ClassForm : Form
 
     private void btnDelete_Click(object sender, EventArgs e)
     {
-        if (selectedClassId > 0)
+        try
         {
-            _classServices.DeleteById(selectedClassId);
-            GetClasses();
-            selectedClassId = 0;
+            if (selectedClassId > 0)
+            {
+                _classServices.DeleteById(selectedClassId);
+                GetClasses();
+                selectedClassId = 0;
+            }
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 
     private void btnUpdate_Click(object sender, EventArgs e)
     {
-        if (selectedClassId > 0)
+        try
         {
-            Class updatedClass = new()
+            if (selectedClassId > 0)
             {
-                ID = selectedClassId,
-                Name = tbClass.Text,
-                Capacity = Convert.ToInt32(tbCapacity.Text)
-            };
-            _classServices.Update(updatedClass);
-            GetClasses();
-        }   
+                Class updatedClass = new()
+                {
+                    ID = selectedClassId,
+                    Name = tbClass.Text,
+                    Capacity = Convert.ToInt32(tbCapacity.Text)
+                };
+                _classServices.Update(updatedClass);
+                GetClasses();
+            }
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }

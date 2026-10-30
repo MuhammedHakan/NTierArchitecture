@@ -19,7 +19,7 @@ public class DiscontinuityServices(DiscontinuityRepostory discontinuityRepostory
         ValidationResult result = new DiscontinuityValidator().Validate(entity);
 
         if (!result.IsValid)
-            throw new Exception("Invalid entity.");
+            throw new Exception(string.Join("\n", result.Errors));
         _discontinuityRepostory.Create(entity);
     }
 

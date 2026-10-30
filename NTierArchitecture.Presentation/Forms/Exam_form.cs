@@ -17,11 +17,6 @@ namespace NTierArchitecture.Presentation.Forms
             _studentServices = studentServices;
             _lessonServices = lessonServices;
         }
-
-        public Exam_form()
-        {
-        }
-
         private void GetAllExams()
         {
             lwExam.Items.Clear();
@@ -73,17 +68,74 @@ namespace NTierArchitecture.Presentation.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Exam exam = new()
+            try
             {
-                LessonID = (int)cbLesson.SelectedValue,
-                StudentID = (int)cbStudent.SelectedValue,
-                Duration = int.Parse(tbDurarion.Text),
-                Note = float.Parse(tbNote.Text),
-                ExamDate = dtExamDate.Value,
-                IsSecondary = cbSecondExam.Checked
-            };
-            _examServices.Create(exam);
-            GetAllExams();
+                Exam exam = new()
+                {
+                    LessonID = (int)cbLesson.SelectedValue,
+                    StudentID = (int)cbStudent.SelectedValue,
+                    Duration = int.Parse(tbDurarion.Text),
+                    Note = float.Parse(tbNote.Text),
+                    ExamDate = dtExamDate.Value,
+                    IsSecondary = cbSecondExam.Checked
+                };
+                _examServices.Create(exam);
+                GetAllExams();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (lwExam.SelectedItems.Count > 0)
+                {
+                    int selectedExamId = Convert.ToInt32(lwExam.SelectedItems[0].Text);
+                    Exam examToUpdate = _examServices.GetById(selectedExamId);
+                    DialogResult result = MessageBox.Show("Are you sure you want to update this exam?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes && examToUpdate != null)
+                    {
+                        examToUpdate.LessonID = (int)cbLesson.SelectedValue;
+                        examToUpdate.StudentID = (int)cbStudent.SelectedValue;
+                        examToUpdate.Duration = int.Parse(tbDurarion.Text);
+                        examToUpdate.Note = float.Parse(tbNote.Text);
+                        examToUpdate.ExamDate = dtExamDate.Value;
+                        examToUpdate.IsSecondary = cbSecondExam.Checked;
+                        _examServices.Update(examToUpdate);
+                        GetAllExams();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (lwExam.SelectedItems.Count > 0)
+                {
+                    int selectedExamId = Convert.ToInt32(lwExam.SelectedItems[0].Text);
+                    DialogResult result = MessageBox.Show("Are you sure you want to delete this exam?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        _examServices.DeleteById(selectedExamId);
+                        GetAllExams();
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

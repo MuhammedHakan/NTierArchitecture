@@ -1,240 +1,135 @@
-\# NTierArchitecture
+# 🏫 NTierArchitecture
 
+![.NET](https://shields.io)
+![Windows Forms](https://shields.io)
+![EF Core](https://shields.io)
+![SQL Server](https://shields.io)
 
+SQL Server tabanlı, katmanlı mimari (N-Tier Architecture) prensiplerine uygun olarak geliştirilmiş modern bir **Öğrenci ve Akademik Kayıt Yönetim Sistemi** Windows Forms uygulamasıdır.
 
-Öğrenci, sınıf, ders, öğretmen, sınav ve devamsızlık kayıtlarını yönetmek için geliştirilmiş, SQL Server kullanan katmanlı bir Windows Forms uygulaması.
+---
 
+## 🚀 Teknolojiler ve Araçlar
 
+Proje geliştirilirken aşağıdaki güncel teknolojiler ve kütüphaneler kullanılmıştır:
 
-\## Teknolojiler
+* **Framework:** .NET 10 (Windows Forms)
+* **ORM:** Entity Framework Core 10
+* **Veritabanı:** Microsoft SQL Server
+* **Doğrulama:** FluentValidation (İş kuralları ve veri doğrulamaları için)
 
+---
 
+## 📂 Proje Yapısı
 
-\- .NET 10
+Uygulama, sorumlulukların net bir şekilde ayrılması amacıyla **4 ana katman** halinde tasarlanmıştır:
 
-\- Windows Forms
+| Proje / Katman | Sorumluluk alanı |
+| :--- | :--- |
+| 🔹 `NTierArchitecture.Domain` | Alan varlıkları (Entities), temel iş modelleri ve veritabanı şeması. |
+| 🔹 `NTierArchitecture.DataAccsess` | `AppDbContext`, EF Core yapılandırmaları ve veri erişim (Repository) sınıfları. |
+| 🔹 `NTierArchitecture.Business` | İş servisleri (Business Services), mantıksal kurallar ve FluentValidation doğrulamaları. |
+| 🔹 `NTierArchitecture.Presentation` | Windows Forms arayüz bileşenleri, uygulama başlangıcı ve IoC/DI bağımlılık kayıtları. |
 
-\- Entity Framework Core 10
+> ⚠️ **Not:** Depo içerisinde veri erişim katmanının adı imla hatasıyla `DataAccsess` olarak adlandırılmıştır. Terminal komutlarında bu adı aynen kullanmaya dikkat edin.
 
-\- SQL Server
+---
 
-\- FluentValidation
+## 🛠️ Gereksinimler
 
+Uygulamayı yerel ortamınızda ayağa kaldırmak için aşağıdaki bileşenlerin yüklü olması gerekir:
 
+* 💻 **İşletim Sistemi:** Windows (Windows Forms bağımlılığı nedeniyle)
+* 💿 **SDK:** [.NET 10 SDK](https://microsoft.com)
+* 🛢️ **Veritabanı:** Microsoft SQL Server (LocalDB veya Express/Standart sürüm)
+* 🔐 **Yetkilendirme:** SQL Server üzerinde veritabanı oluşturma ve düzenleme yetkisine sahip bir Windows hesabı
 
-\## Proje yapısı
+---
 
+## 💻 İlk Kurulum ve Çalıştırma
 
-
-| Proje | Sorumluluk |
-
-|---|---|
-
-| `NTierArchitecture.Domain` | Alan varlıkları ve temel entity modeli |
-
-| `NTierArchitecture.DataAccsess` | `AppDbContext`, Entity Framework Core ve repository sınıfları |
-
-| `NTierArchitecture.Business` | İş servisleri ve FluentValidation doğrulamaları |
-
-| `NTierArchitecture.Presentation` | Windows Forms arayüzü, uygulama başlangıcı ve bağımlılık kayıtları |
-
-
-
-> `DataAccsess` proje adı depoda bu şekilde yazılmıştır. Komutlarda mevcut adı kullanın.
-
-
-
-\## Gereksinimler
-
-
-
-\- Windows işletim sistemi
-
-\- .NET 10 SDK
-
-\- SQL Server
-
-\- Veritabanına erişim izni olan bir Windows hesabı
-
-
-
-\## İlk kurulum
-
-
-
-\### 1. Depoyu klonlayın
-
-
+### 1. Projeyi Klonlayın
+Öncelikle depoyu bilgisayarınıza indirin veya PowerShell üzerinde mevcut klasörünüze geçiş yapın:
 
 ```powershell
-
+# Depoyu klonlamak için:
 git clone https://github.com/MuhammedHakan/NTierArchitecture.git
-
 cd NTierArchitecture
 
+# Depo zaten bilgisayarınızdaysa:
+cd C:\Projects\NTierArchitecture
 ```
 
-
-
-Depo zaten bilgisayarınızdaysa PowerShell'de depo klasörüne geçin:
-
-
+### 2. Bağımlılıkları Yükleyin
+NuGet paketlerini ve proje bağımlılıklarını geri yüklemek için çözüm dosyasını restore edin:
 
 ```powershell
-
-cd C:\\Projects\\NTierArchitecture
-
+dotnet restore .\NTierArchitecture.slnx
 ```
 
-
-
-\### 2. Bağımlılıkları yükleyin
-
-
-
-```powershell
-
-dotnet restore .\\NTierArchitecture.slnx
-
-```
-
-
-
-\### 3. SQL Server bağlantısını yapılandırın
-
-
-
-`NTierArchitecture.Presentation\\appsettings.json` dosyasındaki `DefaultConnection` değerini kendi SQL Server kurulumunuza göre düzenleyin.
-
-
-
-Mevcut varsayılan ayar:
-
-
+### 3. SQL Server Bağlantısını Yapılandırın
+`NTierArchitecture.Presentation\appsettings.json` dosyasını açarak `DefaultConnection` değerini kendi yerel SQL Server ayarlarınıza göre güncelleyin:
 
 ```json
-
 {
-
-&#x20; "ConnectionStrings": {
-
-&#x20;   "DefaultConnection": "Server=.\\\\MSSQLSERVER02;Database=NTierArchitectureDb;Integrated Security=True;Trust Server Certificate=True;"
-
-&#x20; }
-
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=.\\MSSQLSERVER02;Database=NTierArchitectureDb;Integrated Security=True;Trust Server Certificate=True;"
+  }
 }
-
 ```
+* *`Server` parametresini kendi SQL örneğinize (`.\\SQLEXPRESS`, `(localdb)\\MSSQLLocalDB` vb.) göre değiştirmeyi unutmayın.*
 
+### 4. Veritabanı Geçişlerini (Migrations) Uygulayın
+Uygulama ilk açılışta veritabanını otomatik olarak oluşturmaz. Şemayı hazırlamak için aşağıdaki adımları sırasıyla izleyin.
 
-
-Bu ayar `.\\MSSQLSERVER02` adlı SQL Server örneğini ve Windows kimlik doğrulamasını kullanır. Farklı bir sunucu veya örnek kullanıyorsanız `Server` değerini güncelleyin.
-
-
-
-\### 4. Veritabanını hazırlayın
-
-
-
-Uygulama başlangıçta veritabanı migration’larını otomatik uygulamaz. Veritabanı şemasını uygulamayı çalıştırmadan önce oluşturun veya güncelleyin.
-
-
-
-EF Core komut satırı aracı yüklü değilse:
-
-
-
+Eğer bilgisayarınızda **Entity Framework Core CLI** aracı yüklü değilse yükleyin:
 ```powershell
-
 dotnet tool install --global dotnet-ef --version 10.0.12
-
 ```
 
+Projedeki mevcut migration listesini doğrulamak için (isteğe bağlı):
+```powershell
+\$project = ".\NTierArchitecture.DataAccsess\NTierArchitecture.DataAccsess.csproj"
+\$startup = ".\NTierArchitecture.Presentation\NTierArchitecture.Presentation.csproj"
 
+dotnet ef migrations list --project project --startup-project startup --context AppDbContext
+```
 
-Migration’ların mevcut olup olmadığını kontrol edin:
+**Veritabanını oluşturmak ve şemayı basmak için:**
+```powershell
+dotnet ef database update --project project --startup-project startup --context AppDbContext
+```
 
+*Eğer projede henüz hiç hazır migration bulunmuyorsa, önce yeni bir geçiş oluşturup ardından yukarıdaki `update` komutunu çalıştırın:*
+```powershell
+dotnet ef migrations add InitialCreate --project project --startup-project startup --context AppDbContext --output-dir Migrations
+```
 
+### 5. Uygulamayı Derleyin ve Çalıştırın
+Her şey hazır olduğunda projeyi CLI üzerinden derleyip başlatabilirsiniz:
 
 ```powershell
-
-$project = ".\\NTierArchitecture.DataAccsess\\NTierArchitecture.DataAccsess.csproj"
-
-$startup = ".\\NTierArchitecture.Presentation\\NTierArchitecture.Presentation.csproj"
-
-
-
-dotnet ef migrations list --project $project --startup-project $startup --context AppDbContext
-
+dotnet build .\NTierArchitecture.slnx
+dotnet run --project .\NTierArchitecture.Presentation\NTierArchitecture.Presentation.csproj
 ```
 
+> 💡 **Visual Studio Kullanıcıları:** `NTierArchitecture.slnx` dosyasını çift tıklayarak açabilir, `NTierArchitecture.Presentation` projesine sağ tıklayıp **"Set as Startup Project"** dedikten sonra `F5` tuşu ile uygulamayı hızlıca başlatabilirler.
 
+---
 
-Migration’lar mevcutsa veritabanına uygulayın:
+## 📊 Yönetilen Kayıt Türleri ve İlişkiler
 
+Uygulama içerisindeki veri modelleri ve işlevsel modüller şu şekildedir:
 
+* **Sınıf (Class):** Sınıf tanımlamaları ve bu sınıflara bağlı öğrenciler.
+* **Ders (Lesson):** Müfredat dersleri ve dersleri veren öğretmen eşleştirmeleri.
+* **Sınav (Exam):** Öğrenci ve dersler ile doğrudan ilişkili not ve sınav kayıtları.
+* **Devamsızlık (Discontinuity):** Öğrencilerin devamsızlık durumlarının takibi.
 
-```powershell
+---
 
-dotnet ef database update --project $project --startup-project $startup --context AppDbContext
+## 📝 Önemli Yapılandırma Notları
 
-```
-
-
-
-Projede henüz migration yoksa aşağıdaki komutu bir kez çalıştırın, ardından `database update` komutunu çalıştırın:
-
-
-
-```powershell
-
-dotnet ef migrations add InitialCreate --project $project --startup-project $startup --context AppDbContext --output-dir Migrations
-
-```
-
-
-
-\### 5. Uygulamayı derleyip çalıştırın
-
-
-
-```powershell
-
-dotnet build .\\NTierArchitecture.slnx
-
-dotnet run --project .\\NTierArchitecture.Presentation\\NTierArchitecture.Presentation.csproj
-
-```
-
-
-
-Visual Studio ile çalıştırmak için `NTierArchitecture.slnx` dosyasını açın, `NTierArchitecture.Presentation` projesini başlangıç projesi olarak seçin ve uygulamayı başlatın.
-
-
-
-\## Yönetilen kayıt türleri
-
-
-
-\- \*\*Sınıf (Class)\*\* ve öğrenciler
-
-\- \*\*Ders (Lesson)\*\* ve öğretmenler
-
-\- \*\*Sınav (Exam)\*\* — öğrenci ve ders ile ilişkilidir
-
-\- \*\*Devamsızlık (Discontinuity)\*\* — öğrenci ile ilişkilidir
-
-
-
-\## Yapılandırma notları
-
-
-
-\- Veritabanı bağlantısı `NTierArchitecture.Presentation\\appsettings.json` dosyasından okunur.
-
-\- `appsettings.json` derleme çıktısına kopyalanır.
-
-\- SQL Server bağlantı hatasında sunucu/örnek adının ve Windows hesabının veritabanı izinlerinin doğru olduğunu kontrol edin.
-
-\- Uygulama Windows Forms kullandığından Windows üzerinde çalıştırılmalıdır.
-
+* **Bağlantı Yönetimi:** Uygulama çalışma zamanında veritabanı adresini `NTierArchitecture.Presentation\appsettings.json` dosyasından okur. Bu dosya derleme esnasında çıktı (`bin/`) klasörüne otomatik kopyalanmaktadır.
+* **Bağlantı Hataları:** Olası bir SQL bağlantı hatasında, Windows kullanıcınızın SQL Server üzerinde `sysadmin` veya `dbcreator` yetkisine sahip olduğundan ve sunucu adının doğruluğundan emin olun.
+* **Platform Kısıtlaması:** Arayüz motoru olarak yerel Windows kütüphanelerini kullanan Windows Forms tercih edildiği için proje yalnızca **Windows işletim sistemlerinde** çalıştırılabilir.

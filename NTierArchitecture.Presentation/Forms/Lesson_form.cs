@@ -1,6 +1,4 @@
 ﻿using NTierArchitecture.Business.Services;
-using NTierArchitecture.DataAccsess.Context;
-using NTierArchitecture.DataAccsess.Repostories;
 using NTierArchitecture.Domain.Entities;
 
 namespace NTierArchitecture.Presentation.Forms
@@ -12,10 +10,6 @@ namespace NTierArchitecture.Presentation.Forms
         {
             InitializeComponent();
             this._lessonServices = _lessonServices;
-        }
-
-        public Lesson_form()
-        {
         }
 
         private void GetLessons()
@@ -50,28 +44,46 @@ namespace NTierArchitecture.Presentation.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Lesson newLesson = new()
+            try
             {
-                Name = tbLessonName.Text,
-                WeeklyHour = Convert.ToInt32(tbWeeklyHour.Text)
-            };
-            _lessonServices.Create(newLesson);
-            GetLessons();
+                Lesson newLesson = new()
+                {
+                    Name = tbLessonName.Text,
+                    WeeklyHour = Convert.ToInt32(tbWeeklyHour.Text)
+                };
+                _lessonServices.Create(newLesson);
+                GetLessons();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (lwLesson.SelectedItems.Count > 0)
+            try
             {
-                int selectedLessonId = Convert.ToInt32(lwLesson.SelectedItems[0].Text);
-                _lessonServices.DeleteById(selectedLessonId);
-                GetLessons();
+                if (lwLesson.SelectedItems.Count > 0)
+                {
+                    DialogResult result = MessageBox.Show("Are you sure you want to delete the selected lesson?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        int selectedLessonId = Convert.ToInt32(lwLesson.SelectedItems[0].Text);
+                        _lessonServices.DeleteById(selectedLessonId);
+                        GetLessons();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (lwLesson.SelectedItems.Count > 0)
+            try
             {
                 int selectedLessonId = Convert.ToInt32(lwLesson.SelectedItems[0].Text);
                 Lesson lessonToUpdate = _lessonServices.GetById(selectedLessonId);
@@ -82,6 +94,10 @@ namespace NTierArchitecture.Presentation.Forms
                     _lessonServices.Update(lessonToUpdate);
                     GetLessons();
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
