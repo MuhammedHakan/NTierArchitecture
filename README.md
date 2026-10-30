@@ -30,6 +30,7 @@ Uygulama, sorumlulukların net bir şekilde ayrılması amacıyla **4 ana katman
 | 🔹 `NTierArchitecture.DataAccsess` | `AppDbContext`, EF Core yapılandırmaları ve veri erişim (Repository) sınıfları. |
 | 🔹 `NTierArchitecture.Business` | İş servisleri (Business Services), mantıksal kurallar ve FluentValidation doğrulamaları. |
 | 🔹 `NTierArchitecture.Presentation` | Windows Forms arayüz bileşenleri, uygulama başlangıcı ve IoC/DI bağımlılık kayıtları. |
+| 🔹 `NTierArchitecture.Presentation.API` | ASP.NET Core Web API katmanı; Swagger arayüzü ve CRUD endpoint'leri. |
 
 > ⚠️ **Not:** Depo içerisinde veri erişim katmanının adı imla hatasıyla `DataAccsess` olarak adlandırılmıştır. Terminal komutlarında bu adı aynen kullanmaya dikkat edin.
 
@@ -89,8 +90,8 @@ dotnet tool install --global dotnet-ef --version 10.0.12
 
 Projedeki mevcut migration listesini doğrulamak için (isteğe bağlı):
 ```powershell
-\$project = ".\NTierArchitecture.DataAccsess\NTierArchitecture.DataAccsess.csproj"
-\$startup = ".\NTierArchitecture.Presentation\NTierArchitecture.Presentation.csproj"
+$project = ".\NTierArchitecture.DataAccsess\NTierArchitecture.DataAccsess.csproj"
+$startup = ".\NTierArchitecture.Presentation\NTierArchitecture.Presentation.csproj"
 
 dotnet ef migrations list --project project --startup-project startup --context AppDbContext
 ```
@@ -114,6 +115,21 @@ dotnet run --project .\NTierArchitecture.Presentation\NTierArchitecture.Presenta
 ```
 
 > 💡 **Visual Studio Kullanıcıları:** `NTierArchitecture.slnx` dosyasını çift tıklayarak açabilir, `NTierArchitecture.Presentation` projesine sağ tıklayıp **"Set as Startup Project"** dedikten sonra `F5` tuşu ile uygulamayı hızlıca başlatabilirler.
+
+### 6. REST API'yi (Swagger) Çalıştırın
+Windows Forms arayüzüne ek olarak projede bir ASP.NET Core Web API katmanı bulunur. API'yi başlatmak için:
+
+```powershell
+dotnet run --project .\NTierArchitecture.Presentation.API\NTierArchitecture.Presentation.API.csproj
+```
+
+Uygulama açıldığında tarayıcı otomatik olarak Swagger arayüzünü açar:
+
+```text
+http://localhost:5199/swagger
+```
+
+Swagger üzerinden sınıf, ders, öğrenci, öğretmen, sınav ve devamsızlık modüllerinin tüm CRUD endpoint'lerini test edebilirsiniz. OpenAPI dokümanı ayrıca `/openapi/v1.json` adresinde (Development ortamında) yayınlanır.
 
 ---
 

@@ -19,7 +19,6 @@ public class ExamValidator : AbstractValidator<Exam>
             .NotEmpty().WithMessage("Duration is required.")
             .GreaterThan(0).WithMessage("Duration must be greater than 0.");
         RuleFor(Exam => Exam.Note)
-            .NotEmpty().WithMessage("Note is required.")
             .GreaterThanOrEqualTo(0).WithMessage("Note must be greater than or equal to 0.")
             .LessThanOrEqualTo(100).WithMessage("Note must be less than or equal to 100.");
         RuleFor(Exam => Exam.IsSecondary)

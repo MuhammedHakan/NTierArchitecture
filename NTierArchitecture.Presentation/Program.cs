@@ -41,7 +41,6 @@ namespace NTierArchitecture.Presentation
                 #region Services Registration
                 services.AddScoped<ClassRepostory>();
                 services.AddScoped<ClassServices>();
-                services.AddTransient<ClassForm>();
                 services.AddScoped<StudentRepostory>();
                 services.AddScoped<StudentServices>();
                 services.AddScoped<LessonRepostory>();
@@ -52,6 +51,7 @@ namespace NTierArchitecture.Presentation
                 services.AddScoped<DiscontinuityServices>();
                 services.AddScoped<ExamRepostory>();
                 services.AddScoped<ExamServices>();
+                services.AddTransient<ClassForm>();
                 services.AddTransient<Student_form>();
                 services.AddTransient<Lesson_form>();
                 services.AddTransient<Teacher_form>();

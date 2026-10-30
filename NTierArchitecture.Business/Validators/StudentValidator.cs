@@ -15,7 +15,8 @@ public class StudentValidator : AbstractValidator<Student>
         RuleFor(student => student.DateOfBirth)
             .NotEmpty().WithMessage("Date of Birth is required.")
             .LessThan(DateTime.Now).WithMessage("Date of Birth must be in the past.");
-        RuleFor(student => student.Gender)
-            .NotEmpty().WithMessage("Gender is required.");
+        RuleFor(student => student.ClassID)
+            .NotEmpty().WithMessage("ClassID is required.")
+            .GreaterThan(0).WithMessage("ClassID must be greater than 0.");
     }
 }

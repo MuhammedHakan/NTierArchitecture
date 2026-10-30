@@ -2,5 +2,6 @@
   <Project Path="NTierArchitecture.Business/NTierArchitecture.Business.csproj" />
   <Project Path="NTierArchitecture.DataAccsess/NTierArchitecture.DataAccsess.csproj" />
   <Project Path="NTierArchitecture.Domain/NTierArchitecture.Domain.csproj" />
+  <Project Path="NTierArchitecture.Presentation.API/NTierArchitecture.Presentation.API.csproj" Id="80204c48-f5f5-41c7-9b48-16d4673b7e18" />
   <Project Path="NTierArchitecture.Presentation/NTierArchitecture.Presentation.csproj" />
 </Solution>

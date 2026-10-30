@@ -14,6 +14,7 @@ public class DiscontinuityValidator : AbstractValidator<Discontinuity>
             .NotEmpty().WithMessage("Date of Discontinuity is required.")
             .LessThan(DateTime.Now).WithMessage("Date of Discontinuity must be in the past.");
         RuleFor(Discontinuity => Discontinuity.Days)
+            .GreaterThan(0).WithMessage("Days must be greater than 0.")
             .LessThan(30).WithMessage("Days must be less than 30.");
     }
 }
