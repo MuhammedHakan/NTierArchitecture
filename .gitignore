@@ -30,3 +30,25 @@ NTierArchitecture.Presentation/appsettings.*.json
 
 # Örnek yapılandırma dosyası Git'te kalsın
 !NTierArchitecture.Presentation/appsettings.example.json
+
+# React / Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# React build çıktıları
+dist/
+build/
+
+# Vite
+.vite/
+
+# React / TypeScript cache
+*.tsbuildinfo
+
+# Environment dosyaları
+.env
+.env.*
+!.env.example
