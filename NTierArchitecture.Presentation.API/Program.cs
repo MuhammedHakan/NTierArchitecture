@@ -11,11 +11,33 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
 
+// CORS - Tüm kökenlere, metotlara ve başlıklara izin ver
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 // AutoMapper
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 // Built-in OpenAPI document (Development ortaminda /openapi/v1.json)
 builder.Services.AddOpenApi();
+
+// CORS - Tüm kökenlere, metotlara ve başlıklara izin ver
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
 
 // Swagger UI
 builder.Services.AddEndpointsApiExplorer();
@@ -62,6 +84,8 @@ app.UseSwaggerUI(options =>
     options.SwaggerEndpoint("/swagger/v1/swagger.json", "NTierArchitecture API v1");
     options.DocumentTitle = "NTierArchitecture API";
 });
+
+app.UseCors("AllowAll");
 
 app.UseHttpsRedirection();
 
